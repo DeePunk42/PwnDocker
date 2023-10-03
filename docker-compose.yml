@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ctf:
+    image: ctf:ubuntu20.04
+    volumes:
+      - $PWD:/pwd
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    stdin_open: true
+    tty: true
+
